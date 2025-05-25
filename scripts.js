@@ -7,10 +7,3 @@ document.querySelectorAll('.view-details').forEach(btn => {
     document.getElementById('candidateModal').style.display = 'block';
   });
 });
-
-
-window.onclick = function(event) {
-  if (event.target == document.getElementById('candidateModal')) {
-    document.getElementById('candidateModal').style.display = 'none';
-  }
-};

@@ -5,14 +5,10 @@ body {
   color: #282c34;
 }
 header {
-background: #0bea0b;
-    /* color: #466a5e; */
-    text-align: center;
-    padding: 2rem 1rem 1.2rem 1rem;
-    /* background-image: url(teampioneerslogo.jpg); */
-    /* background-size: inherit; */
-    /* background-position: center; */
-    /* height: 200px;
+  background: #228b22;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem 1.2rem 1rem;
 }
 .slogan {
   font-size: 1.2rem;

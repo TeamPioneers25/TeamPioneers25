@@ -8,9 +8,7 @@ document.querySelectorAll('.view-details').forEach(btn => {
   });
 });
 
-document.getElementById('closeModal').onclick = function() {
-  document.getElementById('candidateModal').style.display = 'none';
-};
+
 window.onclick = function(event) {
   if (event.target == document.getElementById('candidateModal')) {
     document.getElementById('candidateModal').style.display = 'none';

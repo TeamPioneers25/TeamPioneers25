@@ -9,6 +9,10 @@ header {
   color: #fff;
   text-align: center;
   padding: 2rem 1rem 1.2rem 1rem;
+   background-image: url('teampioneerslogo.jpg');
+            background-size: cover; /* Ensures the image covers the entire header */
+            background-position: center; /* Centers the image */
+            height: 200px; /* Adjust the height as needed */
 }
 .slogan {
   font-size: 1.2rem;
@@ -120,10 +124,5 @@ footer a {
     align-items: flex-start;
   }
 }
-header {
-            background-image: url('your-image-url.jpg');
-            background-size: cover; /* Ensures the image covers the entire header */
-            background-position: center; /* Centers the image */
-            height: 200px; /* Adjust the height as needed */
-        }
+
 

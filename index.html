@@ -382,7 +382,7 @@ Exe. Member</h5>
     const modal = document.getElementById('candidateModal');
     const modalName = document.getElementById('modalName');
     const modalRole = document.getElementById('modalRole');
-    const modalVision = document.getElementById('modalVision');
+    const modalVision = document.getElementById('modalVision').innerHTML;
     const modalExperience = document.getElementById('modalExperience');
 	const image = document.getElementById('modalPhoto');
     const closeBtn = document.querySelector('.close');
@@ -394,7 +394,7 @@ Exe. Member</h5>
             modalName.textContent = card.dataset.name;
             modalRole.textContent = card.dataset.role;
             //modalVision.textContent = card.dataset.vision;
-		modalVision.innerHTML = card.dataset.vision;
+		modalVision = card.dataset.vision;
 			image.src =card.dataset.image;
             modal.style.display = 'block';
         });

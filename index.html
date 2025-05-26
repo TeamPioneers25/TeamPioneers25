@@ -394,7 +394,7 @@ Exe. Member</h5>
             modalName.textContent = card.dataset.name;
             modalRole.textContent = card.dataset.role;
             //modalVision.textContent = card.dataset.vision;
-		modalVision.innerHtml = card.dataset.vision;
+		modalVision.innerHTML = card.dataset.vision;
 			image.src =card.dataset.image;
             modal.style.display = 'block';
         });

@@ -91,15 +91,12 @@
 					<h2>Meet the Candidates</h2>
 					<div class="candidate-list">
 						<!-- Example candidate; copy for more -->
-						<div class="candidate-card" data-name="Poornima" data-role="Contesting for President" data-vision="&lt;strong&gt;If elected to be Vice President:&lt;/strong&gt;
-&lt;br&gt;
-	&lt;ul&gt;
-		&lt;li&gt;Will drive key initiatives&lt;/li&gt;
-		&lt;li&gt;Encourage participation&lt;/li&gt;
-		&lt;li&gt;Oversee complaint resolution&lt;/li&gt;
-		&lt;li&gt;Plan for Progress&lt;/li&gt;
-		&lt;li&gt;Be a reliable Backup&lt;/li&gt;
-	&lt;/ul&gt;" data-image="candidate1.jpg">
+						<div class="candidate-card" data-name="Poornima" data-role="Contesting for President" data-vision="If elected to be President:
+Shall Oversee Daily operations,
+Ensure good governance,
+Lead with Integrity,
+Liaise with Authorities,
+Support to resolve Issues Swiftly." data-image="candidate1.jpg">
 							<img src="candidate1.jpg" alt="Candidate 1 Photo"/>
 							<h3>Poornima</h3>
 							<h5>Contesting for President</h5>
@@ -331,7 +328,7 @@ Exe. Member</h5>
 					<strong>Role:</strong>
 					<span id="modalRole"/>
 				</p>
-				<span id="modalVision"></span>
+				<span id="modalVision"/>
 			</p>
 		</div>
 	</div>
@@ -356,8 +353,8 @@ Exe. Member</h5>
             const card = this.closest('.candidate-card');
             modalName.textContent = card.dataset.name;
             modalRole.textContent = card.dataset.role;
-            modalVision.innerHTML = card.dataset.vision;
-	    image.src =card.dataset.image;
+            modalVision.textContent = card.dataset.vision;
+			image.src =card.dataset.image;
             modal.style.display = 'block';
         });
     });

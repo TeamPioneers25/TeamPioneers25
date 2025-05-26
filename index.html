@@ -111,7 +111,7 @@ Support to resolve Issues Swiftly."
         </div>
          <div class="candidate-card" data-name="Surya Prakash" 
          data-role="Contesting for Vice President" 
-         data-vision="If elected to be Vice President:
+         data-vision="<strong>If elected to be Vice President:</strong>
 Will drive key initiatives,
 Encourage participation,
 Oversee complaint resolution,
@@ -392,7 +392,7 @@ Exe. Member</h5>
             const card = this.closest('.candidate-card');
             modalName.textContent = card.dataset.name;
             modalRole.textContent = card.dataset.role;
-            modalVision.textContent = card.dataset.vision;
+            modalVision.innerHTML = card.dataset.vision;
             image.src =card.dataset.image;
             modal.style.display = 'block';
         });

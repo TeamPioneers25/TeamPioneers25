@@ -49,6 +49,10 @@ section {
   width: 250px;
   text-align: center;
 }
+.candidate-card:hover {
+      background: #f0f8ff;
+      box-shadow: 0 6px 24px rgba(0, 123, 255, 0.2);
+    }
 .candidate-card img {
   width: 90px;
   height: 90px;

@@ -88,6 +88,46 @@
   height: auto;
   display: block; /* Optional, removes the bottom space */
 }
+	  body {
+      background: #f2f4f8;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .slide {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      min-width: 320px;
+      max-width: 400px;
+      padding: 32px 24px;
+      text-align: center;
+      position: relative;
+      transition: box-shadow 0.2s;
+    }
+    .slide h2 {
+      margin-bottom: 12px;
+      color: #007bff;
+      font-size: 1.4em;
+      transition: color 0.3s;
+    }
+    .slide p {
+      color: #333;
+      font-size: 1.1em;
+      margin: 0;
+    }
+    .fade {
+      animation: fadeIn 1s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
   </style>
   
 </head>
@@ -391,8 +431,11 @@ Given an opportunity to be part of the executive committee members, I would love
         </li>
       </ul>
     </section>
-
-
+<section id="acheivements">
+<div class="slide" id="slide">
+    <h2>Organized Sports Events</h2>
+    <p>Successfully conducted two major sports activities, engaging over 200 participants and fostering team spirit.</p>
+  </div></section>section>
 	  <!-- Contact Form -->
     <section id="contact">
       <h2>Contact Us</h2>
@@ -454,6 +497,48 @@ Given an opportunity to be part of the executive committee members, I would love
         if (event.target === modal) {
             modal.style.display = 'none';
         }
-    };</script>
+    };
+  // Slide Animation
+	  const achievements = [
+      {
+        title: "Organized Sports Events",
+        text: "Successfully conducted two major sports activities, engaging over 200 participants and fostering team spirit."
+      },
+      {
+        title: "Community Volunteering",
+        text: "Actively involved in volunteering teams and ad-hoc committees, contributing to various social initiatives for community betterment."
+      },
+      {
+        title: "Event Management",
+        text: "Served as part of the New Year organizing committee, planning and executing memorable events for all attendees."
+      },
+      {
+        title: "Streamlined facilities management",
+        text: "<ul><li>MyGate process formalization</li>
+		<li>Safety masks for STP staff</li>
+		<li>Staff attendance tracking</li>
+		<li>Walkie-talkie coordination</li>
+		<li>Owner onboarding in MyGate</li></ul>"
+      }
+    ];
+
+    let current = 0;
+    const slide = document.getElementById('slide');
+
+    function showAchievement(index) {
+      slide.classList.remove('fade');
+      void slide.offsetWidth; // Trigger reflow for animation restart
+      slide.innerHTML = `<h2>${achievements[index].title}</h2><p>${achievements[index].text}</p>`;
+      slide.classList.add('fade');
+    }
+
+    setInterval(() => {
+      current = (current + 1) % achievements.length;
+      showAchievement(current);
+    }, 3000);
+
+    // Initial animation
+    slide.classList.add('fade');
+  </script>
 </body>
 </html>

@@ -6,7 +6,19 @@
   <title>TVS Green Enclave Society Election 2025</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/dist/phosphor.js"></script>
   <style>
+	   body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, #dcfce7, #a7f3d0); /* Light green gradient background */
+            color: #333;
+            line-height: 1.6;
+            display: flex; /* Use flexbox for sticky header/footer */
+            flex-direction: column; /* Stack children vertically */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+        }
 	  .my-paragraph {
         color: #333;
     font-size: 15px;
@@ -309,7 +321,13 @@
       <a href="#manifesto">Manifesto</a>
     </nav>
   </header>
+	<div class="container">
   <main>
+	  <section class="text-center mb-8">
+            <a href="#" class="call-to-action-button" onclick="showMessageBox('Let\'s make our community a happy, safe, and progressive place to live!', 3000); return false;">
+                LET’S MAKE OUR COMMUNITY A HAPPY, SAFE, AND PROGRESSIVE PLACE TO LIVE!
+            </a>
+        </section>
 	      <!-- Video Section -->
 	          <section  id="videos" class="mb-8">
             <h3 class="text-2xl font-bold section-title">
@@ -752,7 +770,7 @@ Given an opportunity to be part of the executive committee members, I would love
 </div>
 
   </main>
-
+</div>
   <footer>
     <p>&copy; 2025 TVS Green Enclave Society - Team Pioneers
     </p>

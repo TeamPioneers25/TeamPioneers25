@@ -88,6 +88,25 @@
   height: auto;
   display: block; /* Optional, removes the bottom space */
 }
+	   /* Responsive video container */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 	 
   </style>
   
@@ -105,19 +124,15 @@
   </header>
   <main>
 	      <!-- Video Section -->
-    <section id="videos">
-      <h2>Campaign Videos</h2>
-      <div class="video-container">
-        <iframe max-width ="100%" height="auto"
-  src="https://www.youtube.com/embed/fS1kqHaB0UE"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
-        <!-- Add more video embeds as needed -->
-      </div>
-    </section>
+	          <section  id="videos" class="mb-8">
+            <h3 class="text-2xl font-bold section-title">
+                <i class="ph ph-film-strip ph-icon"></i>
+                Campaign Video
+            </h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/fS1kqHaB0UE" allowfullscreen></iframe>
+            </div>
+        </section>
 	  <!-- Manifesto --->
 	  <section id ="manifesto" >
 		   <h2>Manifesto-2025</h2>

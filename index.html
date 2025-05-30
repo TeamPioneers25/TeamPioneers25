@@ -107,7 +107,194 @@
             height: 100%;
             border: 0;
         }
-	 
+	  body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, #dcfce7, #a7f3d0); /* Light green gradient background */
+            color: #333;
+            line-height: 1.6;
+            display: flex; /* Use flexbox for sticky header/footer */
+            flex-direction: column; /* Stack children vertically */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+        }
+        header.site-header {
+            background-color: #166534; /* Dark green background as fallback */
+            background-image: url('image.png'); /* Background image from uploaded file */
+            background-size: cover; /* Cover the entire header area */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            color: white; /* Ensure text is visible over the image */
+            padding: 2rem 0; /* Increase padding for better image visibility */
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            z-index: 10; /* Ensure it stays on top */
+            position: sticky; /* Make header sticky */
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        header.site-header h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+        }
+        footer.site-footer {
+            margin-top: auto; /* Push footer to the bottom */
+            background-color: #166534; /* Dark green background */
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15); /* Shadow for footer */
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: #ffffff;
+            border-radius: 16px; /* Slightly more rounded corners */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+            animation: fadeIn 1s ease-out;
+            flex-grow: 1; /* Allow container to grow and fill space */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .header-title {
+            background: linear-gradient(to right, #166534, #22c55e); /* Green gradient for title */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800; /* Extra bold */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            color: #1a202c;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            display: flex; /* Use flexbox for alignment with icon */
+            align-items: center; /* Center items vertically */
+            gap: 0.75rem; /* Space between icon and text */
+        }
+        .manifesto-point {
+            background-color: #f7fafc;
+            border-left: 5px solid #22c55e; /* Brighter green accent bar */
+            padding: 1rem 1.25rem;
+            border-radius: 10px; /* More rounded */
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover */
+        }
+        .manifesto-point:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+        }
+        .manifesto-point h3 {
+            color: #14532d; /* Darker green for point titles */
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            display: flex; /* Use flexbox for alignment with icon */
+            align-items: center; /* Center items vertically */
+            gap: 0.5rem; /* Space between icon and text */
+        }
+        .manifesto-point ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            color: #4a5568;
+        }
+        .manifesto-point li {
+            margin-bottom: 0.4rem;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            border-radius: 8px; /* Rounded table corners */
+            overflow: hidden; /* Ensures rounded corners apply to content */
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #dcfce7; /* Lighter green for table header */
+            font-weight: 600;
+            color: #2d3748;
+        }
+        tr:nth-child(even) {
+            background-color: #ecfdf5; /* Very light green for even rows */
+        }
+        tr:hover {
+            background-color: #bbf7d0; /* Slightly darker green on hover */
+        }
+        .candidate-img {
+            width: 40px; /* Smaller image size */
+            height: 40px;
+            border-radius: 50%; /* Circular images */
+            object-fit: cover;
+            margin-right: 0.5rem; /* Space between image and name */
+            border: 2px solid #22c55e; /* Green border around image */
+        }
+        /* Styling for Phosphor Icons */
+        .ph-icon {
+            font-size: 1.5rem; /* Adjust icon size */
+            color: #22c55e; /* Green color for icons */
+            vertical-align: middle;
+            line-height: 1;
+        }
+        .section-title .ph-icon {
+            font-size: 1.8rem; /* Larger icons for section titles */
+        }
+        .call-to-action-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(to right, #10b981, #059669); /* Existing green gradient */
+            color: white;
+            font-weight: 700;
+            border-radius: 9999px; /* Pill shape */
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: none; /* Remove default button border */
+            cursor: pointer;
+        }
+        .call-to-action-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, #059669, #10b981); /* Reverse gradient on hover */
+        }
+        .copy-button {
+            background-color: #22c55e; /* Green */
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            margin-left: 1rem;
+            border: none;
+        }
+        .copy-button:hover {
+            background-color: #16a34a; /* Darker green on hover */
+        }
+        .message-box {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            z-index: 1000;
+        }
+        .message-box.show {
+            opacity: 1;
+        }
   </style>
   
 </head>
